@@ -17,6 +17,6 @@ do
         sudo adduser Army$a
         sudo adduser Navy$a
 	sudo adduser AirForce$a	
-	(($a+1))
+	((a+=1))
 done
 

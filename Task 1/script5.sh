@@ -31,5 +31,5 @@ case $number in
 		;;
 esac
 
-Date=$(date -d "+last $day" "+%Y-%m-%d" )
+Date=$(date -d "last $day" "+%Y-%m-%d" )
 cat /home/$a/attendance_record | grep $Date 

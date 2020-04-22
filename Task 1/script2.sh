@@ -29,6 +29,6 @@ do
 	setfacl -R -m u:ChiefCommander:rwx /home/AirForce$a
 	setfacl -R -m u:AirforceGeneral:rwx /home/AirForce$a
 	chmod 770 Airforce$a
-	(($a+1))
+	((a+=1))
 done
 
