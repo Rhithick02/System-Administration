@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Entering as super user
-su
-
 # Granting permissions to specific users using ACL commands
 chmod 770 ChiefCommander
 
@@ -20,14 +17,14 @@ chmod 770 AirForceGeneral
 a=1
 while ["$a" -le 50 ]
 do
-	setfacl -R -m u:ChiefCommander:rwx /home/Army$a
-	setfacl -R -m u:ArmyGeneral:rwx /home/Army$a
+	sudo setfacl -R -m u:ChiefCommander:rwx /home/Army$a
+	sudo setfacl -R -m u:ArmyGeneral:rwx /home/Army$a
 	chmod 770 Army$a
-	setfacl -R -m u:ChiefCommander:rwx /home/Navy$a
-	setfacl -R -m u:NavyMarshal:rwx /home/Navy$a
+	sudo setfacl -R -m u:ChiefCommander:rwx /home/Navy$a
+	sudo setfacl -R -m u:NavyMarshal:rwx /home/Navy$a
 	chmod 770 Navy$a
-	setfacl -R -m u:ChiefCommander:rwx /home/AirForce$a
-	setfacl -R -m u:AirforceGeneral:rwx /home/AirForce$a
+	sudo setfacl -R -m u:ChiefCommander:rwx /home/AirForce$a
+	sudo setfacl -R -m u:AirforceGeneral:rwx /home/AirForce$a
 	chmod 770 Airforce$a
 	((a+=1))
 done
